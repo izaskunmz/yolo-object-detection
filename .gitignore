@@ -1,0 +1,51 @@
+# Ignorar la carpeta de entornos virtuales
+.venv/
+venv/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de usuario
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Claves API o credenciales privadas (⚠️ Asegúrate de que este archivo contiene datos sensibles)
+download-roboflow.py
+
+# PERMITIR subir `runs/val/`
+!runs/val/
+
+# Ignorar archivos de ejecución y checkpoints de modelos
+runs/detect
+
+weights/
+*.pt
+*.onnx
+*.tflite
+*.engine
+*.ckpt
+
+# EXCEPCIÓN: No ignorar los .pt dentro de runs/val
+!runs/val/*.pt
+
+# Ignorar dataset original de COCO para evitar archivos innecesarios
+datasets/
+download-coco.py
+datasets-download/
+
+# Ignorar archivos con la terminación .Zone.Identifier (propio de Windows)
+*Zone.Identifier
+
+# PERMITIR subir `datasets/combined/`
+# (Eliminar esta línea si accidentalmente se ignora)
+!datasets/combined/
+!datasets/combined/images/
+!datasets/combined/labels/
